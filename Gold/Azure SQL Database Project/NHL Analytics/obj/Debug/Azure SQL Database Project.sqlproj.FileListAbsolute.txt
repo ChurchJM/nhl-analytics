@@ -1,0 +1,5 @@
+/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/bin/Debug/Azure SQL Database Project.dacpac
+/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/obj/Debug/Model.xml
+/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/obj/Debug/refactor.xml
+/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/obj/Debug/postdeploy.sql
+/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/obj/Debug/predeploy.sql

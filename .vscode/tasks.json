@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "sqlproj: Build NHL Analytics",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/NHL Analytics/NHL Analytics.sqlproj"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Builds the NHL Analytics SQL project"
+		},
+		{
+			"label": "sqlproj: Build Azure SQL Database Project",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/home/jeff/Devspace/NHL Analytics Project/Gold/Azure SQL Database Project/Azure SQL Database Project.sqlproj"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Builds the Azure SQL Database Project SQL project"
+		}
+	]
+}
