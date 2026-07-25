@@ -4,3 +4,6 @@ nhl/*
 requirements.txt
 Test Scripts/
 Test Scripts/*
+
+!Bronze/Data/.gitkeep
+!Silver/Data/.gitkeep
