@@ -4,6 +4,8 @@ nhl/*
 requirements.txt
 Test Scripts/
 Test Scripts/*
+Gold/Azure SQL Database/NHL Analytics SQL Project/bin/*
+Gold/Azure SQL Database/NHL Analytics SQL Project/obj/*
 
 !Bronze/Data/.gitkeep
 !Silver/Data/.gitkeep
