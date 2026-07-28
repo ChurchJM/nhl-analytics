@@ -15,7 +15,15 @@ The pipeline is organized according the Medallion design pattern (bronze, silver
 
 Dependencies in the data pipeline are complex (see diagram below) and would greatly benefit from orchestration. I plan to move the pipeline to an [Apache Airflow](https://airflow.apache.org/) DAG when time permits.
 
-<img width="1022" height="400" alt="pipeline_dependencies" src="https://github.com/user-attachments/assets/5073ab9b-b1b2-46c8-ae9d-ca4fe3133ed4" />
-_Dependencies (e.g., execution order) for Python scripts in the data pipeline._
+<img width="1022" height="400" alt="pipeline_dependencies" src="https://github.com/user-attachments/assets/5073ab9b-b1b2-46c8-ae9d-ca4fe3133ed4">
 
-<img width="1470" height="826" alt="schema" src="https://github.com/user-attachments/assets/e5f99fb4-dc1a-4a51-8bbf-92ef594e53c1" />
+*Dependencies (e.g., execution order) for Python scripts in the data pipeline.* 
+
+The SQL schema is shown in the next figure. Some tables are basically just the result of parsing .json from the NHL APIs (i.e., Players) while others contain "new" information derived from the raw data (i.e., Sweaters). The schema is completely normalized, with one exception; three columns in the Games table (Season, GameType, and GameNumber) can be extracted from the Id. For example, from the Id 2022020345, Season (20222023; the first four digits + the next year), GameType (02; the middle two digits), and GameNumber (345; the last four digits) can all be derived.
+
+<img width="1470" height="826" alt="schema" src="https://github.com/user-attachments/assets/e5f99fb4-dc1a-4a51-8bbf-92ef594e53c1">
+
+*Schema of the Azure SQL database deployed by the data pipeline.*
+
+## C# Entity Framework Minimal Web API
+A lightweight web API sits in front of the database, publicly exposing the data without authentication. 
