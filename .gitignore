@@ -9,6 +9,8 @@ Gold/Azure SQL Database/NHL Analytics SQL Project/obj/*
 Azure Minimal Web API/NhlMinimalApi/bin/*
 Azure Minimal Web API/NhlMinimalApi/obj/*
 Azure Minimal Web API/NhlMinimalApi/appsettings.Development.json
+Azure Minimal Web API/NhlMinimalApi/publish/*
+Azure Minimal Web API/NhlMinimalApi/publish.zip
 
 !Bronze/Data/.gitkeep
 !Silver/Data/.gitkeep

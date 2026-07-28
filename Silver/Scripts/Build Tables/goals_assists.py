@@ -33,7 +33,7 @@ for landing_path in p.rglob('*.json'):
         data = json.load(f)
         game_id = data['id']
         game_date = data['gameDate']
-        for period in range(3):
+        for period in range(len(data['summary']['scoring'])):
             period_goals = data['summary']['scoring'][period]['goals']
             for goal in period_goals:
                 player_id = goal['playerId']
@@ -62,7 +62,7 @@ df_assists = pd.DataFrame(assist_rows, columns=['goal_id', 'sweater_id']).reset_
 df_assists.rename(columns={'index' : 'id'}, inplace=True)
 df_assists['id'] = df_assists['id']+1
 
-# print(df_assists.sort_values(by='goal_id').head(20))
+print(df_assists.sort_values(by='goal_id').head(20))
 
-df_goals.to_csv('../../Data/Tables/goals.csv', index=False)
-df_assists.to_csv('../../Data/Tables/assists.csv', index=False)
+# df_goals.to_csv('../../Data/Tables/goals.csv', index=False)
+# df_assists.to_csv('../../Data/Tables/assists.csv', index=False)

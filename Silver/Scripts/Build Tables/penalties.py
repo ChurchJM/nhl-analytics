@@ -93,7 +93,7 @@ for landing_path in p.rglob('*.json'):
         data = json.load(f)
         game_id = data['id']
         game_date = data['gameDate']
-        for period in range(3):
+        for period in range(len(data['summary']['penalties'])): 
             period_penalties = data['summary']['penalties'][period]['penalties']
             for penalty in period_penalties:
                 # ------------------------- GET SWEATER ID -------------------------
@@ -122,9 +122,9 @@ df_penalties = df_penalties.reset_index(drop=True).reset_index()
 df_penalties.rename(columns={'index': 'id'}, inplace=True)
 df_penalties['id'] = df_penalties['id']+1
 
-# print(df_penalties.head(20))
+print(df_penalties.head(20))
 
-df_penalties.to_csv('../../Data/Tables/penalties.csv', index=False)
+# df_penalties.to_csv('../../Data/Tables/penalties.csv', index=False)
 
 
 
