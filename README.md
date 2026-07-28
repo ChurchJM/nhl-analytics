@@ -32,7 +32,10 @@ A lightweight web API sits in front of the database, publicly exposing the data 
 The API project includes model classes for every table in the database, as well as a few data transfer object (DTO) classes. The DTO classes serve to flatten the game summary data and serve it as a single .json payload.
 
 ## Simple Front-End React Application
+There is a simple React app that consumes the /api/boxscores endpoint above.
+* URL: https://calm-ocean-005f9ed10.7.azurestaticapps.net.
 
 ## Future Work
 * Implement data pipeline in Airflow.
-* Expand API/React app into a full react + d3.js dashboard for visual data validation.
+* Expand the API and React app into a full React/d3.js dashboard for visual data validation.
+* CI/CD.
